@@ -1,0 +1,6 @@
+I want to create a simple gui that I can enter reciept totals based on category and get a breakdown of my spending.
+    *Sum all data in categories, and totals
+    *Store data in an excel sheet
+    *Option to add new category
+    *Graphical visualization of data ie Bar Chart
+    *GUI that allows user to enter data
