@@ -1,4 +1,3 @@
-import openpyxl
 from Transaction import *
 from BudgetCategory import *
 from BudgetCalculations import *
@@ -11,22 +10,16 @@ if __name__ == '__main__':
         transactionMethod = "Credit",
         transactionTotal = 60.34
         )
-    temp = userCLI(categoryName="Household")
-    temp.getUserInput()
-    b = Transaction(
-        businessName = temp.businessName, transactionType = temp.transactionType,
-        month = temp.month, day = temp.day, year = temp.year,
-        transactionMethod = temp.transactionMethod,
-        transactionTotal = temp.transactionTotal
-    )
     
+    b = userCLI.getUserInput(categoryName="Household")
+
     category = BudgetCategory('Household')
     category.transactions.append(a)
     category.transactions.append(b)
 
 
     
-    print(f"{category.name}: {sumTotals(category)}")
+    print(f"{category.name}: {sumTotals(category):.2f}")
     for i in category.transactions:
         print(f"\t{i}")
 
