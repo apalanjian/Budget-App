@@ -1,6 +1,8 @@
-import BudgetCategory as BCat
+from BudgetCategory import *
 
-class BudgetCalculations():
+def sumTotals(cat = BudgetCategory()) -> float:
+    sum = 0.0
+    for i in cat.transactions:
+        sum += i.transactionTotal
 
-    def __init__(self) -> None:
-        self.category = BCat()
+    return sum
