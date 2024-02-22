@@ -1,7 +1,7 @@
 from Transaction import *
 from BudgetCategory import *
 from userCLI import userCLI
-from MainFrame import MainFrame
+from gui.MainFrame import MainFrame
 
 if __name__ == '__main__':
     mainWin = MainFrame()
