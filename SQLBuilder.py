@@ -1,17 +1,18 @@
-import mysql.connector
+import sqlite3
 
 class Connector():
 
     def __init__(self):
-        self.mydb = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            password="tempSQLAP24!",
-            database="Budget"
-        )
+        self.connection = sqlite3.connect("budget.db")
+        self.cursor = self.connection.cursor()
 
-        self.myCursor = self.mydb.cursor()
+class BuildTables():
 
+    def __init__(self, con = Connector()) -> None:
+        self.cursor = con.cursor
+
+    def __create_category_table__(self):
+        self.cursor.execute("CREATE TABLE Categories(name category id total)")
 
 class LoadData():
 

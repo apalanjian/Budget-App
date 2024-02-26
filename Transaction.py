@@ -12,6 +12,7 @@ class Transaction():
         self.year = year
         self.transactionMethod = transactionMethod
         self.transactionTotal = transactionTotal
+        self.transactionId = 0
 
     def __repr__(self) -> str:
         return (f"Transaction [Business: {self.businessName}, " + 
